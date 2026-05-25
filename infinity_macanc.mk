@@ -12,9 +12,13 @@ $(call inherit-product, $(SRC_TARGET_DIR)/product/full_base_telephony.mk)
 $(call inherit-product, device/oneplus/macanc/device.mk)
 
 # Inherit some common Lineage stuff.
-$(call inherit-product, vendor/lineage/config/common_full_phone.mk)
+$(call inherit-product, vendor/infinity/config/common_full_phone.mk)
 
-PRODUCT_NAME := lineage_macanc
+INFINITY_MAINTAINER := RaB1DLANDMINE
+WITH_GAPPS := false
+TARGET_HAS_UDFPS := true
+
+PRODUCT_NAME := infinity_macanc
 PRODUCT_DEVICE := macanc
 PRODUCT_MANUFACTURER := OnePlus
 PRODUCT_BRAND := OnePlus
@@ -29,3 +33,5 @@ PRODUCT_BUILD_PROP_OVERRIDES += \
     DeviceProduct=PLR110 \
     SystemDevice=OP6117L1 \
     SystemName=PLR110
+
+PRODUCT_CHECK_PREBUILT_MAX_PAGE_SIZE := false
