@@ -52,20 +52,6 @@ $(call soong_config_set_bool,OPLUS_LINEAGE_TOUCH_HAL,ENABLE_GM,true)
 PRODUCT_PACKAGES += \
     android.hardware.vibrator.service.oplus-richtap
 
-# Camera
-$(call inherit-product, vendor/oplus/camera/oplus-camera.mk)
-
-# Camera tuning and config overlays
-PRODUCT_COPY_FILES += \
-    $(LOCAL_PATH)/configs/camera/camxoverridesettings.txt:$(TARGET_COPY_OUT_VENDOR)/etc/camera/camxoverridesettings.txt
-
-# Permissions
-PRODUCT_PACKAGES += \
-    android.hardware.camera.flash-autofocus.xml \
-    android.hardware.camera.front.xml \
-    android.hardware.camera.full.xml \
-    android.hardware.camera.raw.xml
-
 # Inherit from the common OEM chipset makefile.
 $(call inherit-product, device/oneplus/sm8850-common/common.mk)
 
