@@ -27,8 +27,8 @@ PRODUCT_MODEL := PLR110
 PRODUCT_GMS_CLIENTID_BASE := android-oneplus
 
 PRODUCT_BUILD_PROP_OVERRIDES += \
-    BuildDesc="qssi-user 16 BP2A.250605.015 1778257299582 release-keys" \
-    BuildFingerprint=OnePlus/PLR110/OP6117L1:16/BP2A.250605.015/B.5048344-2c95449-2c869bb:user/release-keys \
+    BuildDesc="qssi-user 16 BP2A.250605.015 1780650256865 release-keys" \
+    BuildFingerprint=OnePlus/PLR110/OP6117L1:16/BP2A.250605.015/B.c4db98_17de607_17d624d:user/release-keys \
     DeviceName=OP6117L1 \
     DeviceProduct=PLR110 \
     SystemDevice=OP6117L1 \
