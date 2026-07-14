@@ -39,8 +39,7 @@ PRODUCT_PACKAGES += \
     OPlusSettingsProviderResTarget \
     OPlusSettingsResTarget \
     OPlusSystemUIResTarget \
-    OPlusWifiResTarget \
-    PlusKey
+    OPlusWifiResTarget
 
 # Soong namespaces
 PRODUCT_SOONG_NAMESPACES += \
