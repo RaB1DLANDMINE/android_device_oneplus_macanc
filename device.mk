@@ -55,5 +55,8 @@ PRODUCT_PACKAGES += \
 # Inherit from the common OEM chipset makefile.
 $(call inherit-product, device/oneplus/sm8850-common/common.mk)
 
+# OPlus Camera (macanc-specific tree + native blobs/apsfixup)
+$(call inherit-product-if-exists, device/oneplus/macanc-camera/opluscamera.mk)
+
 # Inherit from the proprietary files makefile.
 $(call inherit-product, vendor/oneplus/macanc/macanc-vendor.mk)
