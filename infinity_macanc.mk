@@ -4,6 +4,11 @@
 # SPDX-License-Identifier: Apache-2.0
 #
 
+# Infinity build/device identifier. Must be set BEFORE inheriting
+# vendor/infinity/config/common_full_phone.mk, because version.mk expands
+# TARGET_PRODUCT_SHORT and ro.infinity.device from it at include time.
+INFINITY_BUILD := macanc
+
 # Inherit from those products. Most specific first.
 $(call inherit-product, $(SRC_TARGET_DIR)/product/core_64_bit_only.mk)
 $(call inherit-product, $(SRC_TARGET_DIR)/product/full_base_telephony.mk)
