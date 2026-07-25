@@ -9,6 +9,13 @@
 # TARGET_PRODUCT_SHORT and ro.infinity.device from it at include time.
 INFINITY_BUILD := macanc
 
+# Bypass charging: the OnePlus /sys/class/oplus_chg/battery/mmi_charging_enable
+# node supports it and the Lineage Health HAL + GameSpace toggle + Axion
+# GameStateDispatcher are all wired. Flip the Infinity gate on (default is
+# false) so persist.sys.battery_bypass_supported=true and GameSpace shows the
+# "Bypass charging" toggle. Must be set before common_full_phone.mk is included.
+BYPASS_CHARGE_SUPPORTED := true
+
 # Inherit from those products. Most specific first.
 $(call inherit-product, $(SRC_TARGET_DIR)/product/core_64_bit_only.mk)
 $(call inherit-product, $(SRC_TARGET_DIR)/product/full_base_telephony.mk)
